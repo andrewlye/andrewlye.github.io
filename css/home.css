@@ -1,0 +1,32 @@
+html {
+    font-family: -apple-system, Helvetica, arial, sans-serif;
+    color: #333333;
+    line-height: 1.5em;
+}
+
+html a{
+    color: #333333;
+    text-decoration: underline;
+}
+
+body {
+    margin-top: 10%;
+    margin-left: 27%;
+}
+
+.content {
+    padding-right: 35%;
+}
+
+#email {
+    font-family: Courier, monospace;
+}
+
+#github {
+    text-decoration: none;
+}
+
+.links ul {
+    list-style-type: none;
+    padding: 0;
+}

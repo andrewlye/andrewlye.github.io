@@ -1,0 +1,24 @@
+.nav {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    border-bottom: 1px solid #dcdcdc;
+}
+.nav a {
+    color: #686868;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: -apple-system, Helvetica, arial, sans-serif;
+}
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+.nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
