@@ -1,0 +1,30 @@
+---
+layout: default
+title: Blog
+---
+<div id='blog'>
+    <div id='intro'>
+        <div class='quote'>
+            <p>"We are a way for the universe to know itself."</p>
+            <a href='https://en.wikipedia.org/wiki/Carl_Sagan' target='_blank'>Carl Sagan, Cosmos</a>
+        </div>
+    </div>
+    <div id='posts' class='section'>
+        {% for post in site.posts %}
+            <div class='post-row'>
+                <p class='post-title'>
+                    <a href="{{ post.url }}">
+                        {{ post.title }}
+                    </a>
+                </p>
+                <p class='post-date'>
+                    {{ post.date | date_to_long_string }}
+                </p>
+            </div>
+            <p class='post-subtitle'>
+                {{ post.subtitle }}
+            </p>
+            <span class='hidden'>{{ forloop.index }}</span>
+        {% endfor %}
+    </div>
+</div>

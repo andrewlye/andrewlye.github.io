@@ -1,14 +1,18 @@
+html{
+    font-family: -apple-system, Helvetica, arial, sans-serif;
+    color: #333333;
+}
+
 .nav {
     margin-top: 15px;
-    margin-bottom: 15px;
     padding-left: 15px;
-    border-bottom: 1px solid #dcdcdc;
+    display: flex;
+    justify-content: center;
 }
 .nav a {
     color: #686868;
     text-decoration: none;
     font-size: 12px;
-    font-family: -apple-system, Helvetica, arial, sans-serif;
 }
 .nav a:hover {
     text-decoration: underline;
@@ -21,4 +25,64 @@
 .nav ul li {
     display: inline;
     margin-right: 10px;
+}
+
+#blog{
+    margin-left: 27%;
+    padding-right: 27%;
+}
+
+#intro{
+    font-family: -apple-system, Helvetica, arial, sans-serif;
+    border-bottom: 1px solid #dddddd;
+}
+
+#intro a{
+    font-style: italic;
+    text-decoration: none;
+    color: #333333;
+}
+
+.quote{
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.post-title a{
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.post-title a:hover{
+    text-decoration: underline;
+}
+
+.post-date {
+    font-style: italic;
+    margin-top: -10px;
+    font-size: 14px;
+}
+
+.post-subtitle {
+    font-size: 14px;
+}
+
+.hidden{
+    display: none;
+}
+
+.page{
+    margin-left: 20%;
+    padding-right: 20%;
+}
+
+.page-date{
+    margin-top: -20px;
+    font-style: italic;
+}
+
+.page-top{
+    border-bottom: 1px solid #dddddd;
 }

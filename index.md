@@ -2,6 +2,6 @@
 layout: home
 title: Andrew Ye
 ---
-[Publications](index.md) \
-[Blog](index.md) \
+[Publications](publications.html) \
+[Blog](blog.html) \
 [About](about.html)
