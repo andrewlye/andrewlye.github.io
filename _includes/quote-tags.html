@@ -1,0 +1,12 @@
+<div id='intro'>
+    <div class='quote'>
+        <p>"We are a way for the universe to know itself."</p>
+        <p class="quote-author"><a href='https://en.wikipedia.org/wiki/Carl_Sagan' target='_blank'>Carl Sagan, Cosmos</a></p>
+    </div>
+</div>
+<div class="tags">
+    {% for tag in site.tags %}
+      {% capture tag_name %}{{ tag[0] }}{% endcapture %}
+      <a href="/tag/{{ tag_name }}">{{ tag_name }}&nbsp;</a>
+    {% endfor %}
+</div>

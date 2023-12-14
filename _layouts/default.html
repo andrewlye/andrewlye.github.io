@@ -18,6 +18,9 @@
     '>
     <meta name='author' content='Andrew Ye'>
     <link href='/css/main.css' rel='stylesheet'/>
+    {% if site.tags != "" %}
+      {% include collecttags.html %}
+    {% endif %} 
   </head>
   <body>
     {% include navigation.html %}

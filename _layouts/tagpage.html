@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Blog
 ---
-<div id='blog'>
+<div class="tag-page">
     {% include quote-tags.html %}
+    <p id="tag-title">{{ page.title }}</p>
     <div id='posts' class='section'>
-        {% for post in site.posts %}
+        {% for post in site.tags[page.tag] %}
             <div class='post-row'>
                 <p class='post-title'>
                     <a href="{{ post.url }}">

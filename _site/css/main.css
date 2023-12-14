@@ -64,6 +64,39 @@ html{
 .quote{
     font-size: 14px;
     margin-bottom: 12px;
+    font-family: Georgia, serif;
+}
+
+.quote-author{
+    margin-top: -7px;
+    font-size: 12px;
+    font-family: Verdana, sans-serif;
+}
+
+.tags{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    font-family: -apple-system, Helvetica, arial, sans-serif;
+}
+
+.tags a{
+    color: #333333;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.tag-page{
+    margin-left: 27%;
+    padding-right: 27%;
+}
+
+#tag-title{
+    font-weight: bold;
+    font-size: 26px;
+    color: #bbbbbb;
 }
 
 .post-title a{
@@ -93,15 +126,36 @@ html{
 }
 
 .page{
-    margin-left: 20%;
-    padding-right: 20%;
+    margin-left: 25%;
+    padding-right: 25%;
+}
+
+.published-tag{
+    font-size: 14px;
+    font-family: Gill Sans, sans-serif;
 }
 
 .page-date{
-    margin-top: -20px;
-    font-style: italic;
+    margin-top: -10px;
+    font-size: 12px;
+}
+
+.page-author{
+    font-family: Andale Mono, monospace;
 }
 
 .page-top{
     border-bottom: 1px solid #dddddd;
+}
+
+.content{
+    line-height: 1.5em;
+}
+
+.content a{
+    color: #0070E0;
+}
+
+.content a:hover{
+    text-decoration: none;
 }
