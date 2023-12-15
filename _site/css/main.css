@@ -159,3 +159,7 @@ html{
 .content a:hover{
     text-decoration: none;
 }
+
+.blank-space{
+    margin-bottom: 100px;
+}
