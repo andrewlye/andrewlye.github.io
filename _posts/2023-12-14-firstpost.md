@@ -4,8 +4,6 @@ title: The Purpose of This Blog
 author: Andrew Ye
 subtitle: Why I made this blog, how I made it, and what to expect to see.
 tags: other
-permalink: //level/relative/
-rank: 2
 ---
 ![xkcd 741](https://imgs.xkcd.com/comics/blogging.png){:style="display:block; margin-left:auto; margin-right:auto"}
 <p style="text-align: center"><span style="font-weight: bold">Figure 1:</span> <span style="font-style: italic">Blogging</span>  by xkcd</p>
