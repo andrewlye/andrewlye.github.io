@@ -8,7 +8,7 @@
     {% assign sortedTags = site.tags | sort %}
     {% for tag in sortedTags%}
       {% capture tag_name %}{{ tag[0] }}{% endcapture %}
-      <a href="/tag/{{ tag_name }}">{{ tag_name | replace: "-"," " }}&nbsp;|&nbsp;</a>
+      <a href="/tag/{{ tag_name }}">{{ tag_name | replace: "-"," " }}&nbsp;&nbsp;|&nbsp;&nbsp;</a>
     {% endfor %}
     <a href="/blog"> All </a>
 </div>
