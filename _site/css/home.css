@@ -34,3 +34,12 @@ body {
     list-style-type: none;
     padding: 0;
 }
+
+@media screen and (max-width: 480px){
+  body {
+    margin-left: 10%;
+  }
+  .content{
+    padding-right: 10%;
+  }
+}

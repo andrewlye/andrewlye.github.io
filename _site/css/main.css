@@ -45,7 +45,7 @@ html{
     font-weight: normal;
 }
 
-#blog{
+.blog{
     margin-left: 27%;
     padding-right: 27%;
 }
@@ -164,3 +164,15 @@ html{
 .blank-space{
     margin-bottom: 100px;
 }
+
+@media screen and (max-width: 480px){
+    .blog{
+        margin-left: 15px;
+        padding-right: 15px;
+    }
+
+    .page{
+        margin-left: 15px;
+        padding-right: 15px;
+    }
+  }
