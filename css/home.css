@@ -18,6 +18,26 @@ body {
     margin-left: 27%;
 }
 
+.float-child{
+  width: 33%;
+  float: left;
+}
+
+#dealer-cards img{
+  width: 125px;
+}
+
+.under{
+  z-index: 0px;
+}
+
+.over{
+  z-index: 1;
+  position: relative;
+  left: -100px;
+  top: 15px;
+}
+
 .content {
     padding-right: 35%;
 }

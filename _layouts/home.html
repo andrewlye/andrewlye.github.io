@@ -10,18 +10,28 @@
   </head>
   <body>
     <h2>{{ page.title }}</h2>
-    <div class="content">
-    {{ content }}
+    <div class="float-child">
+      <div class="content">
+      {{ content }}
+      </div>
+      <div class="links">
+          <ul> 
+            <li id="email">{{ site.email }}</li> 
+            <li> <i class="fa fa-github"></i> 
+              <a href="https://github.com/andrewlye" id="github" target=”_blank>
+              {{ site.github_username }}
+              </a>
+            </li>
+          </ul>
+      </div>
     </div>
-    <div class="links">
-        <ul> 
-          <li id="email">{{ site.email }}</li> 
-          <li> <i class="fa fa-github"></i> 
-            <a href="https://github.com/andrewlye" id="github" target=”_blank>
-            {{ site.github_username }}
-            </a>
-          </li>
-        </ul>
+    <div class="float-child">
+      <div id="dealer-cards">
+        <img src="./assets/images/cards/card_back.png" class="under"> 
+        <img src="./assets/images/cards/10-C.png" class="over">
+      </div>
+      <div id="player-cards">
+      </div>
     </div>
   </body>
 </html>
