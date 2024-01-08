@@ -35,6 +35,7 @@
 <meta name="theme-color" content="#fdfdfd">
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="assets/js/blackjack.js"></script>
   </head>
   <body>
     <h2>Andrew Ye</h2>
@@ -57,12 +58,18 @@
       </div>
     </div>
     <div class="float-child">
+      <h2>Dealer: <span id="dealer-sum"></h2>
       <div id="dealer-cards">
-        <img src="./assets/images/cards/card_back.png" class="under"> 
-        <img src="./assets/images/cards/10-C.png" class="over">
+        <img id="hidden" src="./assets/images/cards/card_back.png"> 
       </div>
+      
+      <h2>Player: <span id="player-sum"></h2>
       <div id="player-cards">
       </div>
+      
+      <br>
+      <p id="results"></p>
+
     </div>
   </body>
 </html>

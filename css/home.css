@@ -23,9 +23,6 @@ body {
   float: left;
 }
 
-#dealer-cards img{
-  width: 125px;
-}
 
 .under{
   z-index: 0px;
