@@ -4,4 +4,4 @@ title: Andrew Ye
 ---
 [Publications](publications) \
 [Blog](blog) \
-[About](about)
+[About Me](about)

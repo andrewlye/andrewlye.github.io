@@ -36,6 +36,7 @@ body {
   margin-top: 20px;
   background-color: #51a6dc;
   min-height: 350px;
+  min-width: 200px;
   border: solid;
   border-color: #dddddd;
   padding: 30px;
@@ -102,11 +103,10 @@ body {
   border-color: #eeeeee;
 }
 
-#make-dumber{
-}
-
-#make-smarter{
-
+#showcase-caption{
+  font-size: 12px;
+  color: #d3d3d3;
+  text-decoration: none;
 }
 
 #email {
@@ -135,9 +135,21 @@ body {
   }
 
   #showcase{
-    width: 80%;
-    margin-left: -4%;
+    width: 90%;
+  }
 
+  #showcase-caption{
+    margin-bottom: 50px;
+  }
+
+  #dealer-cards img{
+      margin: 3px;
+      height: 80px;
+  }
+
+  #player-cards img{
+      margin: 3px;
+      height: 80px;
   }
 
 }

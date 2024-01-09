@@ -14,6 +14,8 @@ var hidden;
 var deck;
 var q_table;
 
+var imgs = {};
+
 var canHit;
 var bust;
 
@@ -24,6 +26,8 @@ window.onload = function() {
   new_dealer_cards = ""; 
   new_results = ""; 
   new_player_action = ""; 
+
+  buildDeck();
   init(1);
 }
 
@@ -45,7 +49,6 @@ function init(int_level) {
   document.getElementById("intelligence").innerText = intelligence;
 
   selectAgent(intelligence);
-  buildDeck();
   shuffleDeck();
   startGame();
 
@@ -103,7 +106,10 @@ async function buildDeck() {
 
   for (let i=0; i < types.length; i++){
     for (let j=0; j < values.length; j++){
-      deck.push(values[j] + "-" + types[i]);
+      let val = values[j] + "-" + types[i];
+      deck.push(val);
+      let img = preloadImage("./assets/images/cards/" + val + ".png");
+      imgs[val] = img;
     }
   }
 }
@@ -127,10 +133,9 @@ async function startGame() {
   dealerSum += getValue(hidden);
   dealerAceCount += checkAce(hidden);
   
-  let cardImg = document.createElement("img");
   await delay(1000);
   let card = draw();
-  cardImg.src = "./assets/images/cards/" + card + ".png";
+  cardImg = imgs[card];
   dealerSum += getValue(card);
   dealerVisibleSum = getValue(card);
   dealerAceCount += checkAce(card);
@@ -138,10 +143,8 @@ async function startGame() {
 
   for (let i=0; i < 2; i++){
     await delay(1000);
-    let cardImg = document.createElement("img");
-    let cardShade = document.createElement("img");
     let card = draw();
-    cardImg.src = "./assets/images/cards/" + card + ".png";
+    cardImg = imgs[card];
     playerSum += getValue(card);
     playerAceCount += checkAce(card);
     document.getElementById("player-cards").append(cardImg);
@@ -193,9 +196,8 @@ async function hit() {
     return;
   }
   await delay(1000);
-  let cardImg = document.createElement("img");
   let card = draw();
-  cardImg.src = "./assets/images/cards/" + card + ".png";
+  cardImg = imgs[card];
   playerSum += getValue(card);
   playerAceCount += checkAce(card);
   document.getElementById("player-cards").append(cardImg);
@@ -211,9 +213,8 @@ async function stay() {
   document.getElementById("hidden").src = "./assets/images/cards/" + hidden + ".png";
   while (dealerSum < 17) {
     await delay(1000);
-    let cardImg = document.createElement("img");
     let card = draw();
-    cardImg.src = "./assets/images/cards/" + card + ".png";
+    cardImg = imgs[card];
     dealerSum += getValue(card);
     dealerAceCount += checkAce(card);
     document.getElementById("dealer-cards").append(cardImg);
@@ -283,7 +284,13 @@ function checkAce(card) {
 }
 
 function delay(milliseconds){
-      return new Promise(resolve => {
-            setTimeout(resolve, milliseconds);
-        });
+  return new Promise(resolve => {
+        setTimeout(resolve, milliseconds);
+    });
+}
+
+function preloadImage(url){
+  var img = new Image();
+  img.src = url;
+  return img;
 }
