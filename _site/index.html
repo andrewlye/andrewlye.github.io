@@ -38,8 +38,8 @@
     <script src="assets/js/blackjack.js"></script>
   </head>
   <body>
-    <h2>Andrew Ye</h2>
-    <div class="float-child">
+    <div  class="float-child" >
+      <h2>Andrew Ye</h2>
       <div class="content">
       <p><a href="publications">Publications</a> <br />
 <a href="blog">Blog</a> <br />
@@ -57,19 +57,24 @@
           </ul>
       </div>
     </div>
-    <div class="float-child">
-      <h2>Dealer: <span id="dealer-sum"></h2>
-      <div id="dealer-cards">
-        <img id="hidden" src="./assets/images/cards/card_back.png"> 
+    
+      <div id="showcase" class="float-child">
+        <div id="dealer-cards">
+        </div>
+        <div id="middle-box">
+          <p id="results"></p>
+          <p style="display: none;" id='intelligence'></p>
+        </div>
+        <div id="player-cards">
+        </div>    
+        <p id="player-action"></p>
+        <div id="input-wrapper">
+          <div id="input">
+            <button id="make-dumber">Make Dumber</button>
+            <button id="make-smarter">Make Smarter</button>
+          </div>
+        </div>
       </div>
-      
-      <h2>Player: <span id="player-sum"></h2>
-      <div id="player-cards">
-      </div>
-      
-      <br>
-      <p id="results"></p>
-
-    </div>
+    
   </body>
 </html>

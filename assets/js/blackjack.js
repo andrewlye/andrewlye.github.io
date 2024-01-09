@@ -7,45 +7,93 @@ var playerAceCount;
 
 var new_player_cards;
 var new_dealer_cards;
-var new_player_sum;
-var new_dealer_sum;
-var new_hidden;
-var new_results; 
+var new_player_action;
+var new_results;
 
 var hidden;
 var deck;
 var q_table;
 
 var canHit;
+var bust;
+
+var intelligence;
 
 window.onload = function() {
   new_player_cards = document.getElementById("player-cards").innerHTML;
   new_dealer_cards = document.getElementById("dealer-cards").innerHTML;
-  new_player_sum = document.getElementById("player-sum").innerHTML;
-  new_dealer_sum = document.getElementById("dealer-sum").innerHTML;
-  new_hidden = document.getElementById("hidden").innerHTML;
-  new_results = document.getElementById("results").innerHTML; 
-  init();
+  new_results = document.getElementById("results").innerHTML;
+  new_player_action = document.getElementById("player-action").innerHTML;
+  init(1);
 }
 
-function init() {
+function init(int_level) {
+  document.getElementById("player-cards").innerHTML = new_player_cards;
+  document.getElementById("dealer-cards").innerHTML = new_dealer_cards;
+  document.getElementById("results").innerHTML = new_results;
+  document.getElementById("player-action").innerHTML = new_player_action;
+
   dealerSum = 0;
   dealerVisibleSum = 0;
   playerSum = 0;
   dealerAceCount = 0;
   playerAceCount = 0;
   canHit = true;
+  bust = false;
+  intelligence = int_level;
 
-  selectAgent();
+  document.getElementById("intelligence").innerText = intelligence;
+
+  selectAgent(intelligence);
   buildDeck();
   shuffleDeck();
   startGame();
+
+  document.getElementById("make-dumber").addEventListener("click", decreaseInt);
+  document.getElementById("make-smarter").addEventListener("click", increaseInt);
 }
 
+function decreaseInt() {
+  intelligence -= 1;
+  if (intelligence == 0){
+    var x = document.getElementById("make-dumber");
+    x.style.display = 'none';
+  }
+  x = document.getElementById("make-smarter")
+  if (document.getElementById("make-smarter").style.display == 'none'){
+      document.getElementById("make-smarter").style.display = 'inline-block';
+  }
+}
+
+function increaseInt() {
+  intelligence += 1;
+  if (intelligence == 2){
+    var x = document.getElementById("make-smarter");
+    x.style.display = 'none';
+  }
+  x = document.getElementById("make-dumber")
+  if (document.getElementById("make-dumber").style.display == 'none'){
+    document.getElementById("make-dumber").style.display = 'inline-block';
+  }
+}
+
+
 async function selectAgent(){
-  const res = await fetch('./assets/js/agents/default_agent.json')
-  q_table = await res.json();
-  console.log(q_table);
+  if (intelligence == 0){
+    const res = await fetch('./assets/js/agents/dumb_agent.json');
+    q_table = await res.json();
+    console.log(Object.keys(q_table).length);
+  }
+  else if (intelligence == 1){
+    const res = await fetch('./assets/js/agents/default_agent.json');
+    q_table = await res.json();
+    console.log(Object.keys(q_table).length);
+  }
+  else{
+    const res = await fetch('./assets/js/agents/smart_agent.json');
+    q_table = await res.json();
+    console.log(Object.keys(q_table).length);
+  }
 }
 
 async function buildDeck() {
@@ -71,6 +119,10 @@ function shuffleDeck() {
 }
 
 async function startGame() {
+  let hiddenImg = document.createElement("img");
+  hiddenImg.id = "hidden";
+  hiddenImg.src = "./assets/images/cards/card_back.png";
+  document.getElementById("dealer-cards").append(hiddenImg);
   hidden = draw();
   dealerSum += getValue(hidden);
   dealerAceCount += checkAce(hidden);
@@ -84,30 +136,40 @@ async function startGame() {
   dealerAceCount += checkAce(card);
   document.getElementById("dealer-cards").append(cardImg);
 
-  console.log(dealerSum);
-
   for (let i=0; i < 2; i++){
     await delay(1000);
     let cardImg = document.createElement("img");
+    let cardShade = document.createElement("img");
     let card = draw();
     cardImg.src = "./assets/images/cards/" + card + ".png";
     playerSum += getValue(card);
     playerAceCount += checkAce(card);
     document.getElementById("player-cards").append(cardImg);
   }
-  console.log(playerSum);
 
   while(canHit){
+    await delay(1000);
     let move = await getAction();
     if (move == 1) {
-      await delay(1000);
-      hit();
+      document.getElementById("player-action").innerText = "Hit";
+      await delay(400);
+      document.getElementById("player-action").innerHTML = new_player_action;
+      await hit();
     }
     else break;
   }
 
-  await delay(1000);
-  stay();
+  if (bust){
+    await delay(1000);
+    document.getElementById("results").innerText = "Bust!";
+
+    await delay(5000);
+    init(intelligence);
+
+  }
+  else {
+    stay();
+  }
 
 }
 
@@ -117,22 +179,20 @@ async function getAction() {
   var action_space = q_table[state_obs];
 
   if (typeof action_space == "undefined") {
-    console.log("Random Action");
     var rand = (Math.random() >= 0.5) ? 1 : 0;
     return rand;
   }
   else{
-    console.log(action_space);
     var action = (action_space[0] > action_space[1]) ? 0 : 1;
-    console.log(action);
     return action
   }
 }
 
-function hit() {
+async function hit() {
   if (!canHit){
     return;
   }
+  await delay(1000);
   let cardImg = document.createElement("img");
   let card = draw();
   cardImg.src = "./assets/images/cards/" + card + ".png";
@@ -141,11 +201,13 @@ function hit() {
   document.getElementById("player-cards").append(cardImg);
   if (reduceAce(playerSum, playerAceCount) > 21){
     canHit = false;
+    bust = true;
   }
-  console.log(playerSum);
 }
 
 async function stay() {
+  document.getElementById("player-action").innerText = "Stay";
+  await delay(1000);
   document.getElementById("hidden").src = "./assets/images/cards/" + hidden + ".png";
   while (dealerSum < 17) {
     await delay(1000);
@@ -157,7 +219,6 @@ async function stay() {
     document.getElementById("dealer-cards").append(cardImg);
   }
 
-  console.log(dealerSum);
   dealerSum = reduceAce(dealerSum, dealerAceCount);
   playerSum = reduceAce(playerSum, playerAceCount);
   canHit = false;
@@ -180,19 +241,10 @@ async function stay() {
   }
 
   await delay(1000);
-  document.getElementById("dealer-sum").innerText = dealerSum
-  document.getElementById("player-sum").innerText = playerSum
   document.getElementById("results").innerText = message;
 
   await delay(5000);
-  document.getElementById("player-cards").innerHTML = new_player_cards;
-  document.getElementById("dealer-cards").innerHTML = new_dealer_cards;
-  document.getElementById("player-sum").innerHTML = new_player_sum;
-  document.getElementById("dealer-sum").innerHTML = new_dealer_sum;
-  document.getElementById("hidden").innerHTML = new_hidden;
-  document.getElementById("results").innerHTML = new_results;
-
-  init()
+  init(intelligence)
 }
 
 function draw() {

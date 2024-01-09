@@ -4,6 +4,11 @@ html {
     line-height: 1.5em;
 }
 
+@font-face {
+  font-family: 'silkscreen';
+  src: url('/assets/ttf/slkscr.ttf') format('truetype');
+}
+
 html a{
     color: #333333;
     text-decoration: underline;
@@ -18,25 +23,90 @@ body {
     margin-left: 27%;
 }
 
+.content{
+  padding-right: 35%;
+}
+
 .float-child{
   width: 33%;
   float: left;
 }
 
+#showcase {
+  margin-top: 20px;
+  background-color: #51a6dc;
+  min-height: 350px;
+  border: solid;
+  border-color: #dddddd;
+  padding: 30px;
+  position: relative;
+  text-align: center;
+}
+
+#middle-box{
+  margin-top: 10px;
+  height: 50px;
+  border-top: dashed;
+  border-color: #8bcaef;
+  text-align: center;
+}
+
+#results{
+  margin-top: 10px;
+  font-family: 'silkscreen';
+  color: #E5F3FD;
+  font-size: 24px;
+}
+
+#player-action{
+  font-family: 'silkscreen';
+  color: #E5F3FD;
+}
+
+#dealer-cards img{
+  margin: 3px;
+  height: 80px;
+}
+
+#player-cards img{
+  margin: 3px;
+  height: 80px;
+}
+
+.card{
+  position: relative;
+}
 
 .under{
   z-index: 0px;
 }
 
-.over{
-  z-index: 1;
-  position: relative;
-  left: -100px;
-  top: 15px;
+#input-wrapper{
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+
 }
 
-.content {
-    padding-right: 35%;
+#input{
+  position: absolute;
+  bottom: 20px;
+}
+
+#input button{
+  padding: 12px;
+  font-family: 'silkscreen';
+  font-size: 12px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  border-color: #eeeeee;
+}
+
+#make-dumber{
+}
+
+#make-smarter{
+
 }
 
 #email {
@@ -59,4 +129,15 @@ body {
   .content{
     padding-right: 10%;
   }
+  
+  .float-child{
+    width: auto;
+  }
+
+  #showcase{
+    width: 80%;
+    margin-left: -4%;
+
+  }
+
 }
