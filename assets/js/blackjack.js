@@ -20,10 +20,10 @@ var bust;
 var intelligence;
 
 window.onload = function() {
-  new_player_cards = document.getElementById("player-cards").innerHTML;
-  new_dealer_cards = document.getElementById("dealer-cards").innerHTML;
-  new_results = document.getElementById("results").innerHTML;
-  new_player_action = document.getElementById("player-action").innerHTML;
+  new_player_cards = ""; 
+  new_dealer_cards = ""; 
+  new_results = ""; 
+  new_player_action = ""; 
   init(1);
 }
 
