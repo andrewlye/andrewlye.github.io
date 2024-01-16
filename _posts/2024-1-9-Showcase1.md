@@ -5,4 +5,4 @@ author: Andrew Ye
 subtitle: Solving one of the oldest card games with a classic reinforcement learning technique.
 tags: artificial-intelligence
 ---
-
+[ in progress ]
