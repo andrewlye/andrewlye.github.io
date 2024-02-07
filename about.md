@@ -3,10 +3,10 @@ layout: about-page
 title: Andrew Ye
 ---
 <img
-    width= "567"
-    height="1008"
+    width= "300"
+    height="350"
     style="width: 300px; height: 350px; object-fit: cover; display: block; margin-left: auto; margin-right: auto; width: 50%;"
-    src="assets/images/seattle.png"
+    src="assets/images/seattle.jpg"
 />
 \
 \
