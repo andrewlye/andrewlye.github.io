@@ -2,13 +2,7 @@
 layout: about-page
 title: Andrew Ye
 ---
-<img
-    width= "300"
-    height="350"
-    style="width: 300px; height: 350px; object-fit: cover; display: block; margin-left: auto; margin-right: auto; width: 50%;"
-    src="assets/images/seattle.jpg"
-/>
-\
+<img id='magnuson' src="assets/images/seattle.jpg"/>
 \
 Hi! I'm Andrew, a second-year at Case Western Reserve University studying computer science and mathematics. I grew up in Seattle, WA and Hong Kong. My interests lie in artificial intelligence, algorithms, and finance. As such, I am currently involved in several research projects that lie at the heart of their intersections (see [publications](/publications)). In my free time, I like to solve puzzles, play piano (current favorite: Liszt), and be with my [dog](assets/images/son.jpg). I also like to write down things of interest -- or of no interest -- in my [blog](/blog).
 
