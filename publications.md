@@ -1,9 +1,7 @@
 ---
-layout: home
+layout: pubs
 title: Publications
 ---
-[*<< go back*](index.md)
-
 <span style="font-size:32px; font-weight: bold; color: #bbbbbb;">2024</span>
 
 **Learning the Market: Sentiment-Based Ensemble Trading Agents** \

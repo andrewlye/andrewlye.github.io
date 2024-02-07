@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <meta name='description' content='{{ page.subtitle }}'>
+    {% include site-name.html %}
+    {% include meta.html %}
+    <link href='/css/main.css' rel='stylesheet'/>
+    {% if site.tags != "" %}
+      {% include collecttags.html %}
+    {% endif %} 
+  </head>
+  <body>
+    {% include navigation.html %}
+    <div class="page">
+        <h1>{{ page.title }}</h1>
+        <span style="font-size: 24px; font-style: italic;">叶安迪</span>
+        <div class="content">
+        {{ content }}
+        </div>
+        <div class="blank-space">
+        
+        </div>
+        </div>
+  </body>
+</html>
