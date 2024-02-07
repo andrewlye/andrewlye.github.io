@@ -11,7 +11,7 @@ With the support of <a class="about-link" href="https://engineering.case.edu/abo
 - Reseachers at <a href="https://aiml.rice.edu/" target="_blank">Rice AI</a> and <a href="https://imes.mit.edu/" target="_blank">MIT</a> (on network pruning and editing)
 - <a href="https://gammatau.ai/" target="_blank">GammaTau</a> (on mechanistic interpretability and more language model stuff) -- an undergraduate research group started by my friends <a href="https://noahshinn.com/" target="_blank">Noah Shinn</a> and <a href="https://federico.codes/#" target="_blank">Federico Cassano</a>.
 
-Broadly, some questions in AI I am interested in addressing include:
+Broadly, some questions in AI that I am interested in addressing include:
 - How can we ensure that the systems we build are faithful and secure?
 - Models improve with size, yet they are often overparametrized and inefficient. How do we effectively balance this scale-bloat tradeoff?
 - How do neural networks fundamentally reason, think, and *learn*?
