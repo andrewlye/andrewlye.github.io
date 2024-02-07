@@ -12,6 +12,6 @@ Andrew Ye, James Xu, Yi Wang, Yifan Yu, Daniel Yan, Ryan Chen, Bosheng Dong, Vip
 <span style="font-size:32px; font-weight: bold; color: #bbbbbb;">2023</span>
 
 **LeanFlex-GKP: Advancing Hassle-Free Structured Pruning with Simple Flexible Group Count** \
-Jiamu Zhang, Shaochen Zhong, Andrew Ye, Zirui Liu, Kaixiong Zhou, Xia Hu, Shuai Xu, Vipin Chaudhary \
+Jiamu Zhang, Shaochen Zhong\*, Andrew Ye\*, Zirui Liu, Kaixiong Zhou, Xia Hu, Shuai Xu, Vipin Chaudhary \
 *WANT@NeurIPS 2023* \
 <a href="https://openreview.net/pdf?id=NxpWp0IhgB" target="_blank">pdf</a>
