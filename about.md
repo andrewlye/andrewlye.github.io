@@ -15,7 +15,7 @@ Hi! I'm Andrew, a second-year at Case Western Reserve University studying comput
 With the support of <a class="about-link" href="https://engineering.case.edu/about/school-directory/shuai-xu" target="_blank">Shuai Xu</a> and <a href="https://engineering.case.edu/about/school-directory/vipin-chaudhary" target="_blank">Vipin Chaudhary</a>, I founded and currently lead [quant[at]CWRU](), a research group of undergraduates and post-grads focused on integrating current paradigms in machine learning to solve hard financial tasks. I also work with: 
 - Professor <a href="https://ottovonxu.github.io/" target="_blank">Zhaozhuo Xu</a> (on faithfulness in large language models)
 - Reseachers at <a href="https://aiml.rice.edu/" target="_blank">Rice AI</a> and <a href="https://imes.mit.edu/" target="_blank">MIT</a> (on network pruning and editing)
-- <a href="https://gammatau.ai/" target="_blank">GammaTau</a> (on mechanistic interpretability and more language model stuff) - an undergraduate research group started by my friends <a href="https://noahshinn.com/" target="_blank">Noah Shinn</a> and <a href="https://federico.codes/#" target="_blank">Federico Cassano</a>.
+- <a href="https://gammatau.ai/" target="_blank">GammaTau</a> (on mechanistic interpretability and more language model stuff) -- an undergraduate research group started by my friends <a href="https://noahshinn.com/" target="_blank">Noah Shinn</a> and <a href="https://federico.codes/#" target="_blank">Federico Cassano</a>.
 
 Broadly, some questions in AI I am interested in addressing include:
 - How can we ensure that the systems we build are faithful and secure?
