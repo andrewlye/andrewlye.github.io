@@ -13,7 +13,7 @@ With the support of professors <a class="about-link" href="https://engineering.c
 
 Broadly, some questions in AI that I am interested in addressing include:
 - How can we ensure that the systems we build are faithful and secure?
-- Models improve with size, yet they are often overparametrized and inefficient. How do we effectively balance this scale-bloat tradeoff?
+- Models improve with size, yet they are often overparameterized and inefficient. How do we effectively balance this scale-bloat tradeoff?
 - How do neural networks fundamentally reason, think, and *learn*?
 - On that topic, where do we draw the line for artificial general intelligence as it grows nearer?
 
