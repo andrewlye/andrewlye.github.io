@@ -6,6 +6,7 @@ title: Publications
 
 **Learning the Market: Sentiment-Based Ensemble Trading Agents** \
 Andrew Ye, James Xu, Yi Wang, Yifan Yu, Daniel Yan, Ryan Chen, Bosheng Dong, Vipin Chaudhary, Shuai Xu\
+*Preprint* \
 <a href="https://arxiv.org/pdf/2402.01441.pdf" target="_blank">pdf</a>
 <a href="https://arxiv.org/abs/2402.01441" target="_blank">arXiv</a>
 
