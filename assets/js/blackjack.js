@@ -28,7 +28,7 @@ window.onload = function() {
   new_player_action = ""; 
 
   buildDeck();
-  init(1);
+  init(2);
 }
 
 function init(int_level) {
@@ -49,11 +49,12 @@ function init(int_level) {
   document.getElementById("intelligence").innerText = intelligence;
 
   selectAgent(intelligence);
+  buildDeck();
   shuffleDeck();
   startGame();
 
-  document.getElementById("make-dumber").addEventListener("click", decreaseInt);
-  document.getElementById("make-smarter").addEventListener("click", increaseInt);
+  //document.getElementById("make-dumber").addEventListener("click", decreaseInt);
+  //document.getElementById("make-smarter").addEventListener("click", increaseInt);
 }
 
 function decreaseInt() {
@@ -85,17 +86,14 @@ async function selectAgent(){
   if (intelligence == 0){
     const res = await fetch('./assets/js/agents/dumb_agent.json');
     q_table = await res.json();
-    console.log(Object.keys(q_table).length);
   }
   else if (intelligence == 1){
     const res = await fetch('./assets/js/agents/default_agent.json');
     q_table = await res.json();
-    console.log(Object.keys(q_table).length);
   }
   else{
     const res = await fetch('./assets/js/agents/smart_agent.json');
     q_table = await res.json();
-    console.log(Object.keys(q_table).length);
   }
 }
 
@@ -250,7 +248,9 @@ async function stay() {
 
 function draw() {
   let i = Math.floor(Math.random() * deck.length)
-  return deck[i];
+  let ret = deck[i];
+  deck.splice(i,1);
+  return ret;
 }
 
 function getValue(card) {
