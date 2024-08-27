@@ -5,7 +5,7 @@ title: Publications
 <span style="font-size:32px; font-weight: bold; color: #bbbbbb;">2024</span>
 
 **GNNs Also Deserve Editing, and They Need It More Than Once** \
-Shaochen Zhong, Duy Le, Zirui Liu, Zhimeng Jiang, Andrew Ye, Jiamu Zhang, Jiayi Yuan, Kaixiong Zhou, Zhaozhuo Xu, Jing Ma, Shuai Xu, Vipin Chaudhary, Xia Hu \
+Shaochen Zhong*, Duy Le*, Zirui Liu, Zhimeng Jiang, Andrew Ye, Jiamu Zhang, Jiayi Yuan, Kaixiong Zhou, Zhaozhuo Xu, Jing Ma, Shuai Xu, Vipin Chaudhary, Xia Hu \
 *ICML 2024* \
 <a href="https://openreview.net/pdf?id=rIc9adYbH2" target="_blank">pdf</a>
 
