@@ -17,6 +17,10 @@
         <h1>{{ page.title }}</h1>
         <p class="published-tag">Published</p>
         <p class="page-date">{{ page.date | date_to_string }}</p>
+        {% if page.edited != "" %}
+          <p class="published-tag">Modified</p>
+          <p class="page-date">{{ page.edited }}</p>
+        {% endif %}
         <p class="page-author">{{ page.author }}</p>
         </div>
         <div class="content">
