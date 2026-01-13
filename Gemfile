@@ -37,3 +37,7 @@ gem "webrick", "~> 1.8"
 gem "rexml", "~> 3.3"
 
 gem "json", "~> 2.7"
+
+gem "csv", "~> 3.3"
+
+gem "erb", "~> 6.0"
